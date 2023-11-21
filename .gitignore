@@ -1,3 +1,5 @@
 build/
 case/adapter-case.stl
 pcb/pcb-backups
+.pio/build .pio/libdeps
+.DS_Store
