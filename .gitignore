@@ -4,3 +4,4 @@ pcb/pcb-backups
 .pio/build .pio/libdeps
 .DS_Store
 .pio/*
+.vscode/*
