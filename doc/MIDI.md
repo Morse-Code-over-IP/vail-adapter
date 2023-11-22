@@ -12,13 +12,15 @@ and can set the keyer mode.
 ## Controller 0 - MIDI Mode
 
 `b0 00 ff` will enable MIDI mode and disable Keyboard mode
++ Example: `sendmidi dev "Arduino Leonardo" ch 1 cc 0 0`
 
 `b0 00 00` will enable Keyboard mode and disable MIDI mode
-
++ Example: `sendmidi dev "Arduino Leonardo" ch 1 cc 0 127`
 
 ## Controller 1 - dit length
 
 `b0 00 xx` will set the dit duration to `xx` times 2 milliseconds
++ Example: `sendmidi dev "Arduino Leonardo" ch 1 cc 1 20``
 
 
 ## Controller 2 - sidetone note
@@ -29,6 +31,8 @@ and can set the keyer mode.
 ## Program Change
 
 `c0 xx` will change the keyer mode to `xx`.
+
++ Example: `sendmidi dev "Arduino Leonardo" pc 7`       
 
 
 ### Keyer Modes
@@ -53,3 +57,14 @@ Any other mode will set to passthrough.
 `80 00 xx` will end playing note `xx`
 
 These work just like a regular MIDI synthesizer.
+
+
+# Debugging on Mac OS
+
+## Installation
+
+```
+brew install gbevin/tools/sendmidi        
+brew install gbevin/tools/receivemidi        
+receivemidi dev "Arduino Leonardo"
+```
