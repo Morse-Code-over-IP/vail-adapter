@@ -61,6 +61,8 @@ These work just like a regular MIDI synthesizer.
 
 # Debugging on Mac OS
 
++ Ref: https://github.com/nealey/vail/blob/main/static/scripts/inputs.mjs 
+
 ## Installation
 
 ```
