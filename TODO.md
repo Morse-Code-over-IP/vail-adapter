@@ -1,0 +1,2 @@
+- CI/CD in github with platformio?
+- Rename MIDI Device Name to Vail adapter or so
