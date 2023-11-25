@@ -24,9 +24,9 @@ License: MIT
 
 ## Supported hardware
 
-Microcontroller| MIDI Support | Keyboard Emulation | Sidetone
----------------|--------------|--------------------|---------
-[CM-32U4](https://wiki.dfrobot.com/Beetle_CM_32U4_SKU_DFR0816)      | OK           | OK                 | 
+Microcontroller| MIDI Support | Keyboard Emulation | Sidetone | Touch Paddle
+---------------|--------------|--------------------|----------|--------------
+[CM-32U4](https://wiki.dfrobot.com/Beetle_CM_32U4_SKU_DFR0816) | OK | OK | No | No
 
 
 # Setting Up
