@@ -22,10 +22,20 @@ License: MIT
 
 [Vail Adapter benefits video](https://www.youtube.com/watch?v=XQ-mwdyLkOY) (4:46)
 
+## Supported hardware
+
+Microcontroller| MIDI Support | Keyboard Emulation | Sidetone
+---------------|--------------|--------------------|---------
+[CM-32U4](https://wiki.dfrobot.com/Beetle_CM_32U4_SKU_DFR0816)      | OK           | OK                 | 
+
+
 # Setting Up
 
 * [Easy Setup](doc/easy-install.md)
 * [Advanced Setup](doc/advanced-install.md)
+
+## Building
+`brew install platformio`
 
 
 # Future Work
@@ -56,3 +66,4 @@ https://id.arduino.cc/neale
   Vail window focused.
 * [CWKeyboard](https://github.com/kevintechie/CWKeyboard) looks almost 
   exactly the same as the VBand adapter.
+
