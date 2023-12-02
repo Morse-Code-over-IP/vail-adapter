@@ -34,6 +34,14 @@ Microcontroller| MIDI Support | Keyboard Emulation | Sidetone | Touch Paddle
 * [Easy Setup](doc/easy-install.md)
 * [Advanced Setup](doc/advanced-install.md)
 
+## PINS
+
+```
+#define DIT_PIN 2
+#define DAH_PIN 1
+#define KEY_PIN 0
+```
+
 ## Building
 `brew install platformio`
 
