@@ -43,8 +43,8 @@ Microcontroller| MIDI Support | Keyboard Emulation | Sidetone | Touch Paddle
 ```
 
 ## Building
-`brew install platformio`
-
++ `brew install platformio`
++ Install VS Code and PlatformIO IDE extension
 
 # Future Work
 
