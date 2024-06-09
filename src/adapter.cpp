@@ -37,7 +37,7 @@ void VailAdapter::keyboardKey(uint8_t key, bool down) {
 void VailAdapter::BeginTx() {
     this->buzzer->Note(0, this->txNote);
     if (this->keyboardMode) {
-        this->keyboardKey(KEY_LEFT_CTRL, true);
+        this->keyboardKey(KEY_LEFT_SHIFT, true);
     } else {
         this->midiKey(0, true);
     }
@@ -47,7 +47,7 @@ void VailAdapter::BeginTx() {
 void VailAdapter::EndTx() {
     this->buzzer->NoTone(0);
     if (this->keyboardMode) {
-        this->keyboardKey(KEY_LEFT_CTRL, false);
+        this->keyboardKey(KEY_LEFT_SHIFT, false);
     } else {
         this->midiKey(0, false);
     }
