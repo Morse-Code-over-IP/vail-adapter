@@ -1,6 +1,6 @@
 # Vail Adapter: Morse Code Key/Paddle to USB
 
-![Vail adapter, assembled and connected](doc/vail-adapter-v2.jpg)
+<img src="doc/vail-adapter-v2.jpg" width="100" height="100"> 
 
 
 # Features
