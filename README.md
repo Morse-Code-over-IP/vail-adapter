@@ -22,6 +22,10 @@ Microcontroller  |                                      | MIDI Support | Keyboar
 ------------------------------------------------------|-|-------------|--------------------|----------|--------------
 [CM-32U4](https://wiki.dfrobot.com/Beetle_CM_32U4_SKU_DFR0816) | <img src="doc/DFR0816.jpg" width="50" height="50"> | OK | OK | No | No
 
+Seeeduino XIAO SAMD21
+
+
+
 
 # Setting Up
 
