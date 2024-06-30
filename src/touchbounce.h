@@ -1,5 +1,6 @@
 #pragma once
 
+#ifdef ARDUINO_ARCH_SAMD
 #include <Adafruit_FreeTouch.h>
 #include "bounce2.h"
 
@@ -14,3 +15,4 @@ protected:
     bool readCurrentState();
     Adafruit_FreeTouch qt;
 };
+#endif

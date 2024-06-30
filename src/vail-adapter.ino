@@ -5,7 +5,9 @@
 // MIDIUSB - Version: Latest 
 #include <MIDIUSB.h>
 #include <Keyboard.h>
+#ifdef ARDUINO_ARCH_SAMD
 #include <Adafruit_FreeTouch.h>
+#endif
 #include "bounce2.h"
 #include "touchbounce.h"
 #include "adapter.h"
@@ -32,9 +34,11 @@ uint16_t iambicDelay = 80 * MILLISECOND;
 Bounce dit = Bounce();
 Bounce dah = Bounce();
 Bounce key = Bounce();
+#ifdef ARDUINO_ARCH_SAMD
 TouchBounce qt_dit = TouchBounce();
 TouchBounce qt_dah = TouchBounce();
 TouchBounce qt_key = TouchBounce();
+#endif
 VailAdapter adapter = VailAdapter(PIEZO);
 
 void setup() {
@@ -42,9 +46,11 @@ void setup() {
   dit.attach(DIT_PIN, INPUT_PULLUP);
   dah.attach(DAH_PIN, INPUT_PULLUP);
   key.attach(KEY_PIN, INPUT_PULLUP);
+  #ifdef ARDUINO_ARCH_SAMD
   qt_dit.attach(QT_DIT_PIN);
   qt_dah.attach(QT_DAH_PIN);
   qt_key.attach(QT_KEY_PIN);
+  #endif
 
   Keyboard.begin();
 
@@ -97,10 +103,17 @@ void loop() {
   }
 
   // Monitor straight key pin
+  #ifdef ARDUINO_ARCH_SAMD
   if (key.update() || qt_key.update()) {
     bool pressed = !key.read() || qt_key.read();
     adapter.HandlePaddle(PADDLE_STRAIGHT, pressed);
   }
+  #else
+  if (key.update()) {
+    bool pressed = !key.read();
+    adapter.HandlePaddle(PADDLE_STRAIGHT, pressed);
+  }
+  #endif
 
   // If we made dit = dah, we have a straight key on the dit pin,
   // so we skip other keys polling.
@@ -108,6 +121,7 @@ void loop() {
     return;
   }
 
+  #ifdef ARDUINO_ARCH_SAMD
   if (dit.update() || qt_dit.update()) {
     bool pressed = !dit.read() || qt_dit.read();
     adapter.HandlePaddle(PADDLE_DIT, pressed);
@@ -117,4 +131,15 @@ void loop() {
     bool pressed = !dah.read() || qt_dah.read();
     adapter.HandlePaddle(PADDLE_DAH, pressed);
   }
+  #else
+  if (dit.update()) {
+    bool pressed = !dit.read();
+    adapter.HandlePaddle(PADDLE_DIT, pressed);
+  }
+  
+  if (dah.update()) {
+    bool pressed = !dah.read();
+    adapter.HandlePaddle(PADDLE_DAH, pressed);
+  }
+  #endif
 }

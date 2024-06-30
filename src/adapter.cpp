@@ -1,7 +1,9 @@
 #include <Arduino.h>
 #include <Keyboard.h>
 #include <MIDIUSB.h>
+#ifdef ARDUINO_ARCH_SAMD
 #include <cstddef>
+#endif
 #include "keyers.h"
 #include "adapter.h"
 #include "polybuzzer.h"
