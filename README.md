@@ -1,9 +1,3 @@
----
-Author: neale
-Email: neale@woozle.org
-License: MIT
----
-
 # Vail Adapter: Morse Code Key/Paddle to USB
 
 ![Vail adapter, assembled and connected](doc/vail-adapter-v2.jpg)
@@ -62,7 +56,14 @@ https://id.arduino.cc/neale
 
 
 
-# Similar projects
+# References 
+---
+Author: neale
+Email: neale@woozle.org
+License: MIT
+---
+
+## Similar projects
 
 * Vail user Michele Giugliano's 
   [MorsePaddle2USB](https://github.com/mgiugliano/MorsePaddle2USB),
@@ -74,4 +75,3 @@ https://id.arduino.cc/neale
   Vail window focused.
 * [CWKeyboard](https://github.com/kevintechie/CWKeyboard) looks almost 
   exactly the same as the VBand adapter.
-
