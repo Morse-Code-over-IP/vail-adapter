@@ -5,8 +5,9 @@
 [releases](https://github.com/nealey/vail-adapter/releases)
 3. [Enter bootloader mode](https://wiki.seeedstudio.com/Seeeduino-XIAO/#enter-bootloader-mode)
 4. Copy the firmware onto the XIAO SAMD21
+Reset process: https://wiki.seeedstudio.com/Seeeduino-XIAO/ (Double tap the pins)
 
-[Wideo walkthrough of firmware upload](https://www.youtube.com/watch?v=IgOdkUe5SMY) (3:07)
+[Video walkthrough of firmware upload](https://www.youtube.com/watch?v=IgOdkUe5SMY) (3:07)
 
 If you would like to use a different microcontroller,
 see the [advanced install instructions](advanced-install.md).

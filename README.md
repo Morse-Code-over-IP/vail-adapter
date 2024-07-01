@@ -40,6 +40,14 @@ Microcontroller  |                                      | MIDI Support | Keyboar
 #define KEY_PIN 0
 ```
 
+### Touch PINS
+```
+#define QT_DIT_PIN A6
+#define QT_DAH_PIN A7
+#define QT_KEY_PIN A8
+```
+
+
 ## Building
 + `brew install platformio`
 + Install VS Code and PlatformIO IDE extension
